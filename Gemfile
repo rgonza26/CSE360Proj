@@ -48,3 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
 gem 'devise'
+
+gem 'fullcalendar-rails'
+

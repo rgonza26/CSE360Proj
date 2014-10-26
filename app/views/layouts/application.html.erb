@@ -11,17 +11,31 @@
 <div class="container">
 	<ul class="nav nav-tabs">
 		<li><%= link_to "Home", root_path %></li>
-		<li><%= link_to "Events", site_events_path %></li>
+		<li><%= link_to "Events", mainevents_path %></li>
 		<li><%= link_to "Contact Us", site_contactUs_path %></li>
-		<li><%= link_to "Profile", site_profile_path %></li>
+
+		<% if user_signed_in? %>
+			<li> <%= link_to( 'Profile', site_profile_path) %> </li>
+			<li> <%= link_to( 'Logout', destroy_user_session_path, :method => :delete) %> </li>
+		<% else %>
+			<li> <%= link_to( 'Login', new_user_session_path) %> </li>
+		<% end %>
 	</ul>
 </div>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-
-<%= yield %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<%= yield %>
+		</div>
+		<div class="col-md-6">
+			<div id='calendar'></div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

@@ -11,9 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025200533) do
+ActiveRecord::Schema.define(version: 20141026195100) do
+
+  create_table "brains", force: true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.text     "description"
+    t.text     "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "main_sites", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mainevents", force: true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.text     "description"
+    t.text     "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "site_events", force: true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.text     "description"
+    t.text     "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

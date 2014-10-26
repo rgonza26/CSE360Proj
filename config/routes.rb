@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+  resources :mainevents
+
   devise_for :users
   get 'site/index'
 
@@ -8,7 +12,10 @@ Rails.application.routes.draw do
 
   get 'site/contactUs'
 
-  get 'main_site/index'
+  get 'brains/index'
+
+
+
 
   root 'site#index'
 
