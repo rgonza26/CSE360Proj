@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '4c7f37a178e6bc2c879e40357c783359f92ec93fbebcf776fe6af4efec1c27c353ade960a184f20cda726ebc1c538d4508033acde9173b50a6381341ff035379'
 
-  ActionMailer::Base.default_url_options = { :host => "localhost:3000" }
+  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
